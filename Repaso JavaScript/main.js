@@ -65,3 +65,22 @@ var coche = {
 document.write("<h1>"+coche.modelo+"</h1>");
 coche.mostrarDatos();
 console.log(coche);
+
+//Promesas
+var saludar = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let saludo = "Hola muy buenas";
+    //saludo = false; //cambiar a true para que se ejecute el resolve
+    if(saludo){
+      resolve(saludo);    
+    } else {
+      reject("No hay saludo disponible");
+    }   
+  }, 2000);
+});
+
+saludar.then((resultado) => {
+  alert(resultado);
+}).catch((error) => {
+  alert(error);
+});   
