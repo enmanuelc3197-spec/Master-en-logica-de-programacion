@@ -4,7 +4,6 @@ Enunciado: Dado dos numeros, devolver cuantos numeros IMPARES hay entre ellos
 
 function numerosimpares(numero1, numero2){
     let contar = 0;
-    resultado = "";
 
     // Asegurarnos de que uno < dos (por si los ingresan al revés)
     if (numero1 > numero2) {
@@ -14,12 +13,11 @@ function numerosimpares(numero1, numero2){
     }
 
     for(let i = numero1; i < numero2; i++){
-        if(i % 2 == 0){ // si el número es impar
+        if(i % 2 !== 0){ // Validacion del número 
             contar ++; 
-            resultado = `El total de numero impares es: ${contar}`; 
         }
     }
-    return resultado;
+    return contar;
 }
 
-console.log(numerosimpares(2,100));
+console.log("El total de numero impares es: ", numerosimpares(1,100));
