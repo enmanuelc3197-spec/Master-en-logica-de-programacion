@@ -22,4 +22,4 @@ function numerosimpares(numero1, numero2){
     return resultado;
 }
 
-console.log(numerosimpares(2,20));
+console.log(numerosimpares(2,100));
